@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import * as React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -14,7 +15,7 @@ function classNames(...classes: any) {
 
 export default function NavBar() {
     return (
-        <Disclosure as="nav" className="bg-black opacity-80">
+        <Disclosure as="nav" className="bg-black opacity-80 z-10">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -27,7 +28,8 @@ export default function NavBar() {
                         </DisclosureButton>
                     </div>
                     <div className='flex'>
-                        <h1 className="font-serif font-bold pl-20 text-3xl sm:text-3xl md:text-3xl text-white ">alexis matei</h1>
+                        {/* problema cu fontul */}
+                        <h1 className="font-oswald font-bold pl-20 text-3xl sm:text-3xl md:text-3xl text-white ">Alexis Matei</h1>
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                         <div className="hidden sm:ml-6 sm:block">

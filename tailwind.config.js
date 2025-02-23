@@ -1,12 +1,8 @@
-module.exports = {
-    // Alte configurări Tailwind
-    theme: {
-      extend: {
-        textIndent: {
-          'custom': '30px',
-        }
-      },
-    },
-    plugins: [],
+export const content = ["*"];
+export const theme = {
+  extend: {},
+  container: {
+    padding: "1rem"
   }
-  
+};
+export const plugins = [];

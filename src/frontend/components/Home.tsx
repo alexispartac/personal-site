@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import * as React from 'react';
 
 export default function Home() {
     return (
@@ -38,28 +38,29 @@ export default function Home() {
                                 Salut,
                             </h2>
                             <br />
-                            <p className="mt-6 text-xl/8 text-gray-700 indent-6">
+                            <section className="mt-6 text-xl/8 text-gray-700 indent-6">
                                 <strong>Partac Alexis-Matei</strong> este numele meu, am 20 de ani și sunt la începutul carierei mele în domeniul software engineering.
                                 Studiez la <strong>Universitatea "Gheorge Asachi" </strong> din Iasi cu specializarea <strong>Ingineria Sistemelor</strong>.
-                            </p>
-                            <p className="mt-6 text-xl/8 text-gray-700 indent-6">
+                            </section>
+                            <section className="mt-6 text-xl/8 text-gray-700 indent-6">
                                 Sunt o persoană atentă la detalii, dornică să învăț și să mă perfecționez continuu. Îmi place să colaborez cu echipe diverse și sunt convins că pot aduce o contribuție valoroasă în cadrul oricărui proiect.
-                            </p>
+                            </section>
                         </div>
                     </div>
                 </div>
                 <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                     <img
                         alt=""
-                        src="https://tailwindui.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                        className="w-[48rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
+                        src="https://images-product-rafa.s3.us-east-1.amazonaws.com/image-me.jpg"
+                        className="w-[20rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[40rem] opacity-90"
                     />
                 </div>
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-10">
                     <div className="lg:pr-4">
                         <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
                             <p className="indent-6 pt-0">
-                                Pe parcursul studiilor, am lucrat cu diverse tehnologii și limbaje de programare, cum ar fi HTML, CSS, JavaScript, React, TypeScript,
+                                Pe parcursul studiilor, am lucrat cu diverse tehnologii și limbaje de programare, cum ar fi HTML, CSS, Tailwind, JavaScript, React, TypeScript,
+                                NodeJs, Git, AWS
                                 și am realizat proiecte pe care le veti gasi pe pagina <strong>proiecte</strong>,
                                 care mi-au oferit o înțelegere solidă a proceselor de dezvoltare software, inclusiv dezvoltare front-end, back-end, baze de date, testare.
                             </p>
@@ -74,7 +75,7 @@ export default function Home() {
                                     <span>
                                         {/* CV ul meu */}
                                         <a href="">
-                                            <strong className="font-semibold text-gray-900">Aici puteti gasi CV-ul meu complet.</strong>
+                                            <strong className="font-semibold text-gray-900 hover:underline">Aici puteti gasi CV-ul meu complet.</strong>
                                         </a>
                                     </span>
                                 </li>
@@ -82,36 +83,37 @@ export default function Home() {
                             <p className="indent-6 pt-3">
                                 Daca sunteti interesat de ceea ce fac ma puteti gasi si pe retelele sociale.
                             </p>
-                            <ul role="list" className="flex mt-8 space-x-[15px]  pt-3">
-                                <li className="pl-10">
+                            <ul role="list" className="grid grid-cols-5 justify center mt-8 space-x-[15px] pt-3">
+                                <li>
                                     <div className="flex items-center justify-center">
-                                        <a href="https://www.instagram.com/" className="text-3xl mr-4">
+                                        <a href="https://www.instagram.com/mateialexis/" className="text-3xl mr-4">
+                                            {/* trebuie schimbate  */}
                                             <i className="fab fa-instagram"></i>
                                         </a>
                                     </div>
                                 </li>
-                                <li className="pl-10">
+                                <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://x.com/?mx=2" className="text-3xl mr-4">
                                             <i className="fab fa-x-twitter"></i>
                                         </a>
                                     </div>
                                 </li>
-                                <li className="pl-10">
+                                <li>
                                     <div className="flex items-center justify-center">
-                                        <a href="https://www.linkedin.com/" className="text-3xl mr-4">
+                                        <a href="www.linkedin.com/in/alexis-partac-b15b101b5" className="text-3xl mr-4">
                                             <i className="fab fa-linkedin"></i>
                                         </a>
                                     </div>
                                 </li>
-                                <li className="pl-10">
+                                <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://www.facebook.com/" className="text-3xl mr-4">
                                             <i className="fab fa-facebook"></i>
                                         </a>
                                     </div>
                                 </li>
-                                <li className="pl-10">
+                                <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://github.com/alexispartac" className="text-3xl mr-4">
                                             <i className="fab fa-github"></i>
@@ -119,8 +121,6 @@ export default function Home() {
                                     </div>
                                 </li>
                             </ul>
-
-                            {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2> */}
                             <p className="mt-6">
                             </p>
                         </div>

@@ -1,20 +1,84 @@
 'use client'
-import React from 'react'
-import { useState } from 'react'
+import * as React from 'react'
+import emailjs from '@emailjs/browser';
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
 import { Field, Label, Switch } from '@headlessui/react'
 
+type InfoFormProp = {
+    first_name: string,
+    last_name: string,
+    company?: string,
+    email: string,
+    phone_number: string,
+    message: string
+}
+
 export default function Contact() {
-    const [agreed, setAgreed] = useState(false)
+    const [agreed, setAgreed] = React.useState<boolean>(false);
+    const [infoForm, setInfoForm] = React.useState<InfoFormProp>(
+        {
+            first_name: "",
+            last_name: "",
+            company: "",
+            email: "",
+            phone_number: "",
+            message: ""
+        }
+    );
+
+    React.useEffect(() => {
+        emailjs.init({
+            publicKey: 'aKQS4bLVSyXfhE0Rc',
+        });
+    }, []);
+
+    const handleChange = (e: any) => {
+        const { name, value } = e.target;
+        setInfoForm({
+            ...infoForm,
+            [name]: value
+        });
+    };
+
+    const SendEmail = () => {
+        emailjs.send('service_m7xm4on', 'template_zael9ym', infoForm)
+            .then((result) => {
+                console.log('Email successfully sent:', result.text);
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                alert('Failed to send email. Please check the console for details.');
+            });
+    };
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        if (agreed) {
+            SendEmail();
+            setInfoForm(
+                {
+                    first_name: "",
+                    last_name: "",
+                    company: "",
+                    email: "",
+                    phone_number: "",
+                    message: ""
+                }
+            );
+        } else {
+            alert('Please accept the terms and conditions.');
+        }
+
+    };
 
     return (
         <div className="h-screen flex items-center justify-center">
-            <div className="isolate h-screen  bg-white px-6 py-24 sm:py-32 lg:px-8">
+            <div className="isolate h-screen bg-white px-6 py-24 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contacteaza-ma</h2>
                     <p className="mt-2 text-lg/8 text-gray-600">Voi raspunde cat de repde posibil la mesajul tau.</p>
                 </div>
-                <form action="" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+                <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -23,10 +87,11 @@ export default function Contact() {
                             <div className="mt-2.5">
                                 <input
                                     id="first-name"
-                                    name="first-name"
+                                    name="first_name"
+                                    onChange={handleChange}
                                     type="text"
                                     autoComplete="given-name"
-                                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 invalid:border-pink-500 invalid:text-pink-600 focus:border-sky-500"
                                 />
                             </div>
                         </div>
@@ -37,8 +102,9 @@ export default function Contact() {
                             <div className="mt-2.5">
                                 <input
                                     id="last-name"
-                                    name="last-name"
+                                    name="last_name"
                                     type="text"
+                                    onChange={handleChange}
                                     autoComplete="family-name"
                                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                                 />
@@ -53,6 +119,7 @@ export default function Contact() {
                                     id="company"
                                     name="company"
                                     type="text"
+                                    onChange={handleChange}
                                     autoComplete="organization"
                                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                                 />
@@ -67,6 +134,7 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     type="email"
+                                    onChange={handleChange}
                                     autoComplete="email"
                                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                                 />
@@ -97,8 +165,10 @@ export default function Contact() {
                                     </div>
                                     <input
                                         id="phone-number"
-                                        name="phone-number"
+                                        name="phone_
+                                        number"
                                         type="text"
+                                        onChange={handleChange}
                                         placeholder="123-456-7890"
                                         className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
                                     />
@@ -114,6 +184,7 @@ export default function Contact() {
                                     id="message"
                                     name="message"
                                     rows={4}
+                                    onChange={handleChange}
                                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                                     defaultValue={''}
                                 />
