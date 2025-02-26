@@ -73,8 +73,7 @@ export default function Home() {
                             <ul role="list" className="mt-8 space-y-8 text-gray-600 pt-3">
                                 <li className="flex gap-x-3">
                                     <span>
-                                        {/* CV ul meu */}
-                                        <a href="">
+                                        <a href="https://my-w-s.s3.us-east-1.amazonaws.com/CV-2025.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIA2YICAFC6ZBZJO2N5%2F20250226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250226T181925Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECsaCXVzLWVhc3QtMSJHMEUCIQCMUCn6wBBOSZYTASCXNdzPZqVeDHVWCgVIaWffLkNAvwIgUuhjhSpt38OH%2BQCJgVBM4EOJ4HXben4m3K2bQV0gToIq%2FwIIYxAAGgw3MzkyNzU0NTA1NTciDKyHlCxDnklxNvf59SrcAlW%2Fo%2BXycH4FCo0cypDAbT3%2FTnGDyAo4gzxqqVnk%2FGJCeTJUPi9z1Cmfpq6WAgNCDzb6YJ1AXXFxAOj0vYTBhhBovhq1RqHzabV8O0%2FmK55iUN65QllDsACOC0b2NnK0okxkgDM7TNryRi6UafcfT4bkRLzvWfjrxN861VMUsPL6WW6VtyQELGAgDPAAtJ07QmZaMaJJQELqoxcjX48QxHoOCSDJNKnp%2F5EYnBjZSlwTUs977OItoU4FSFmLEeqhct15S1bNRe4%2FqzXXOA65bZ13%2FI1wrJNhTLSqIUzEEdOM7mL6Sw5gc0pnshH9AA0JiaBmTbeosC9BLP%2BzqubzfLKt73Ioqbc3EMyO%2BwedFGTQVafyWnNomCximT2M4Yz3xhPY7dpDAaz2TV%2By1TqHSOMZH1bQhUovRaO4%2B8qO1PWTIYYYpKRqpvQOppOD%2FmQLhDB82cgI0xbr4od1hzCKm%2F29BjqzAtNcFHYjrFFEjHcsDr3EAz04QP8d2vdeQ1ryQAY2UQZEbPvALY2MeRaTS%2F7%2BA3f2ClsHx9Rofv%2BVAAPnDHznWv99Yt0m3WWZpzLuWMV4uzMtmldiob2S08%2B1OYeDEesjYiw%2B2fSQzYws2mZDyzSD7%2FJ5OudftVgY1Lkclllfo7fUUd3qPe2iTzR2s0%2FdwxrXpZzz%2BgQlFxP5ZBupaowdvaltoGj1107UbsPFcVqYjSvd5Sv%2BSQGyhj7oewBuhd6aJ4%2BRofG2XRQfVduvswsvWuaAL%2FXlhkmnm2cEvwwUJKjCpXtFrLSdp9bduEmcZE9wG8KSNshKwPebHp08joSrLHyg82PMM4OqZommrOsNEM0PP0d3YDKIWF%2BPUDbRTM0yI1yO0azueKJT1Jf36F%2FLO5Kc2gs%3D&X-Amz-Signature=9a5985c6882a82ce31f7b9dc3b34d02b7b3e15bbd94590833734e250c95ef914&X-Amz-SignedHeaders=host&response-content-disposition=inline">
                                             <strong className="font-semibold text-gray-900 hover:underline">Aici puteti gasi CV-ul meu complet.</strong>
                                         </a>
                                     </span>
@@ -86,43 +85,40 @@ export default function Home() {
                             <ul role="list" className="grid grid-cols-5 justify center mt-8 space-x-[15px] pt-3">
                                 <li>
                                     <div className="flex items-center justify-center">
-                                        <a href="https://www.instagram.com/mateialexis/" className="text-3xl mr-4">
-                                            {/* trebuie schimbate  */}
-                                            <i className="fab fa-instagram"></i>
+                                        <a href="https://www.instagram.com/mateialexis/" >
+                                            <img className='w-[2rem]' src="https://all-favicons.s3.us-east-1.amazonaws.com/favicons/instagram.png" alt="HTML" />
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://x.com/?mx=2" className="text-3xl mr-4">
-                                            <i className="fab fa-x-twitter"></i>
+                                            <img className='w-[2rem]' src="https://all-favicons.s3.us-east-1.amazonaws.com/favicons/twitter.png" alt="HTML" />
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="flex items-center justify-center">
-                                        <a href="www.linkedin.com/in/alexis-partac-b15b101b5" className="text-3xl mr-4">
-                                            <i className="fab fa-linkedin"></i>
+                                        <a href="https://www.linkedin.com/in/alexis-partac-b15b101b5" className="text-3xl mr-4">
+                                            <img className='w-[2rem]' src="https://all-favicons.s3.us-east-1.amazonaws.com/favicons/icons8-linkedin-48.png" alt="HTML" />
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://www.facebook.com/" className="text-3xl mr-4">
-                                            <i className="fab fa-facebook"></i>
+                                            <img className='w-[2rem]' src="https://all-favicons.s3.us-east-1.amazonaws.com/favicons/facebook.png" alt="HTML" />
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="flex items-center justify-center">
                                         <a href="https://github.com/alexispartac" className="text-3xl mr-4">
-                                            <i className="fab fa-github"></i>
+                                            <img className='w-[2rem]' src="https://all-favicons.s3.us-east-1.amazonaws.com/favicons/icons8-github-64.png" alt="HTML" />
                                         </a>
                                     </div>
                                 </li>
                             </ul>
-                            <p className="mt-6">
-                            </p>
                         </div>
                     </div>
                 </div>

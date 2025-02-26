@@ -31,9 +31,9 @@ const Projects = () => {
                         <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
                     </svg>
                 </div>
-                <div className='flex flex-col sm:flex-row sm:place-content-around'>
+                <div className='flex flex-col sm:flex-row sm:place-content-around sm:basis-1/2'>
                     <div className='flex flex-col gap-y-1 sm:pr-30 sm:pl-10 sm:pt-50 sm:basis-1/2 sm:justify-start'>
-                        <h1 className='text-md text-gray-800 sm:text-3xl sm:pb-5 '>Site pentru resell</h1>
+                        <h1 className='text-xl text-gray-800 sm:text-3xl sm:pb-5 '>Site pentru resell</h1>
                         <p className='text-gray-700 sm:text-xl sm:pr-10'>
                             Acesta este un site pentru produse vestimentare, cuprinde o
                             interfață prietenoasă pentru utilizator. <br />
@@ -70,12 +70,15 @@ const Projects = () => {
                         </ul>
                         <br />
                     </div>
-                    <img className='flex-none shadow-md rounded-2xl sm:basis-1/2 sm:object-cover sm:max-w-[30rem] sm:max-h-[50rem]' src="https://images-product-rafa.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+140352.png" alt="" />
+                    <div className='flex item-center'>
+                        <img className='object-contain shadow-md' src="https://images-product-rafa.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+140352.png" alt="" />
+                    </div>
                 </div>
                 <br />
-                <div className='flex flex-col sm:flex-row sm:place-content-around'>
-                    <div className='flex flex-col gap-y-1 sm:pr-30 sm:pl-10 sm:pt-50 sm:basis-1/2 sm:justify-start'>
-                        <h1 className='text-md text-gray-800 sm:text-3xl sm:pb-5 '>To do list </h1>
+                <br />
+                <div className='flex flex-col sm:flex-row sm:place-content-around sm:basis-1/2'>
+                    <div className='flex flex-col gap-y-1 sm:pr-30 sm:pl-[6rem] sm:pt-50 sm:basis-1/2 sm:justify-start'>
+                        <h1 className='text-xl text-gray-800 sm:text-3xl sm:pb-5 '>To do list </h1>
                         <p className='text-gray-700 sm:text-xl sm:pr-10'>
                             Acesta este un demo pentru ideea de to do list, cuprinde concepte
                             de baza a unui API RESTful. <br />
@@ -106,7 +109,9 @@ const Projects = () => {
                         </ul>
                         <br />
                     </div>
-                    <img className='flex-none rounded-2xl sm:basis-1/2 sm:object-scale-down shadow-md sm:max-w-[30rem] sm:max-h-[50rem]' src="https://images-product-rafa.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+140750.png" alt="" />
+                    <div className='flex item-center sm:max-w-[30rem]'>
+                        <img className='object-contain shadow-md' src="https://images-product-rafa.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+140750.png" alt="" />
+                    </div>
                 </div>
             </div>
         </div>
